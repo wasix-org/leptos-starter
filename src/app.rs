@@ -1,7 +1,7 @@
 use leptos::{tracing::info, *};
 use leptos_meta::*;
 use leptos_router::*;
-use log::Level;
+// use log::Level;
 
 #[component]
 pub fn App(cx: Scope) -> impl IntoView {

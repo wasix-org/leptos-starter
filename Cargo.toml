@@ -35,7 +35,6 @@ parking_lot = { version = "=0.12.1", features = ["nightly"] }
 
 # walkdir = "2"
 
-
 [patch.crates-io]
 socket2 = { git = "https://github.com/john-sharratt/socket2.git", branch = "v0.4.7" }
 libc = { git = "https://github.com/john-sharratt/libc.git" }

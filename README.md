@@ -145,6 +145,7 @@ As you see we are using forked versions of a lot of dependencies. These are curr
 Now you can compile your project with
 
 > An easy experience would be to just make a new `Cargo.toml` fileand place your previous dependencies in it. You can see in our project too, we have a `Cargo.wasix.toml` which is used for compiling for WASIX.
+
 > Note ⚠️: after updating your `Cargo.toml` , don't forget to run `cargo update` to update your `Cargo.lock` file.
 
 ```bash copy

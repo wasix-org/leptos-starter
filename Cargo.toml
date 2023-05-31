@@ -7,45 +7,23 @@ edition = "2021"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-axum = { version = "0.6.16", optional = true }
+axum = { version = "0.6.4", optional = true }
 console_error_panic_hook = "0.1"
 console_log = "1"
 cfg-if = "1"
-leptos = { version = "=0.2.5", default-features = false, features = [
-    "serde",
-], git = "https://github.com/theduke/leptos.git", branch = "wasix" }
-leptos_axum = { version = "1.0.0", optional = true, git = "https://github.com/theduke/leptos.git", branch = "wasix" }
-leptos_meta = { version = "=0.2.5", default-features = false, git = "https://github.com/theduke/leptos.git", branch = "wasix" }
-leptos_router = { version = "=0.2.5", default-features = false, git = "https://github.com/theduke/leptos.git", branch = "wasix" }
+leptos = { version = "0.3", default-features = false, features = ["serde"] }
+leptos_axum = { version = "0.3", optional = true }
+leptos_meta = { version = "0.3", default-features = false }
+leptos_router = { version = "0.3", default-features = false }
 log = "0.4"
-serde = { version = "1", features = ["derive"] }
 simple_logger = "4"
+tokio = { version = "1.25.0", optional = true }
 tower = { version = "0.4.13", optional = true }
 tower-http = { version = "0.4", features = ["fs"], optional = true }
 wasm-bindgen = "0.2.84"
 thiserror = "1.0.38"
 tracing = { version = "0.1.37", optional = true }
 http = "0.2.8"
-
-
-tokio = { version = "=1.24.2", features = [
-    "full",
-], git = "https://github.com/theduke/tokio.git", branch = "wasix-1.24.2-fixed", optional = true }
-parking_lot = { version = "=0.12.1", features = ["nightly"] }
-
-# walkdir = "2"
-
-[patch.crates-io]
-socket2 = { git = "https://github.com/john-sharratt/socket2.git", branch = "v0.4.7" }
-libc = { git = "https://github.com/john-sharratt/libc.git" }
-tokio = { git = "https://github.com/theduke/tokio.git", branch = "wasix-1.24.2-fixed" }
-tokio-util = { version = "=0.7.3", features = [
-    "rt",
-], git = "https://github.com/theduke/tokio.git", branch = "wasix-1.24.2-fixed" }
-syn-rsx = { git = "https://github.com/theduke/syn-rsx.git", branch = "wasix" }
-proc-macro-error = { git = "https://github.com/theduke/proc-macro-error", branch = "wasix" }
-wasm-bindgen = { git = "https://github.com/syrusakbary/wasm-bindgen", branch = "wasi" }
-
 
 [features]
 hydrate = ["leptos/hydrate", "leptos_meta/hydrate", "leptos_router/hydrate"]

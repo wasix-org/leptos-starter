@@ -1,0 +1,1 @@
+~/.cargo/bin/wasmer --env LEPTOS_OUTPUT_NAME="start-axum" --env LEPTOS_SITE_ROOT="site" --env LEPTOS_SITE_PKG_DIR="pkg" --env LEPTOS_SITE_ADDR="127.0.0.1:3000" start-axum.wasm --net --mapdir=/site:/Volumes/Work/Projects/Wasmer/wasix-tutorials/leptos-starter/target/site
